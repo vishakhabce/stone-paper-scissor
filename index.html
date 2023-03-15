@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="conatiner">
+      <div class="upper-container">
+        <div id="item">
+          <div>ROCK</div>
+          <div>PAPER</div>
+          <div>SCISSORS</div>
+        </div>
+        <div id="score-container">
+          <div class="score">
+            <div class="s-title">
+              COMPUTER
+              <br />
+              SCORE
+            </div>
+            <div class="s-value" id="computer-score">0</div>
+          </div>
+          <div class="score">
+            <div class="s-title">
+              YOUR
+              <br />
+              SCORE
+            </div>
+            <div class="s-value" id="user-score">0</div>
+          </div>
+        </div>
+      </div>
+      <div class="lower-container">
+        <div class="select-container ">
+          <div class="u-btn">
+            <div class="btn" id="stone" onclick="stoneSelect()">
+              <img src="./assets/stone.png" alt="stone" />
+            </div>
+            <div class="btn" id="scissor" onclick="scissorSelect()">
+              <img src="./assets/scissor.png" alt="scissor" />
+            </div>
+          </div>
+          <div class="l-btn">
+            <div class="btn" id="paper" onclick="paperSelect()">
+              <img src="./assets/paper.png" alt="paper" />
+            </div>
+          </div>
+        </div>
+        <div class="result-container hide">
+          <div class="btn user-choice" >
+            <div class="pick">YOU PICKED</div>
+            <img src="./assets/stone.png" alt="" />
+          </div>
+          <div class="action">
+            <div class="result">YOU WIN AGAINST PC</div>
+            <Button class="action-btn" onclick="playAgain()">PLAY AGAIN</Button>
+          </div>
+          <div class="btn computer-choice" >
+            <div class="pick">PC PICKED</div>
+            <img src="./assets/stone.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="rule-container hide">
+          <div class="rule-title">Game Rules</div>
+            <ul>
+              <li>
+                Rock beats scissors, scissors beat paper, and paper beats rock.
+              </li>
+              <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
+              <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+              <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+      </div>
+        <button class="close hide" onclick="closeRule()">X</button>
+        <button class="rules" onclick="displayRule()">RULES</button>
+    </div>
+
+      <script src="./index.js"></script>
+  </body>
+</html>
