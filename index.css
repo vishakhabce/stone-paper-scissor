@@ -183,7 +183,23 @@ img {
   position: absolute;
   top: 90vh;
   right: 3vw;
-  padding: 10px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.next {
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  background-color: transparent;
+  position: absolute;
+  top: 90vh;
+  right: 10vw;
+  padding: 8px;
   cursor: pointer;
 }
 
@@ -252,6 +268,49 @@ ul li::before {
   cursor: pointer;
 }
 
+/* hurray container  */
+
+.hurray-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+.win-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+
+}
+.hurray {
+  width: 100%;
+}
+.trophy{
+  position: absolute;
+  top: 200px;
+  width: 11%;
+}
+
+.t1 {
+  font-weight: 600;
+  font-size: 91px;
+  line-height: 107px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+.t2 {
+  font-weight: 600;
+  font-size: 41px;
+  line-height: 48px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
 /* helpers  */
 
 .hide {

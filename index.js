@@ -33,16 +33,21 @@ function selectWinner(player, computer) {
   const p2Index = options.indexOf(computer.toLowerCase());
 
   if (p1Index === p2Index) {
+    document.querySelector(".action-btn").innerHTML = "REPLAY"
     return "TIE UP";
   } else if (
     (p1Index === 0 && p2Index === 2) ||
     (p1Index === 1 && p2Index === 0) ||
     (p1Index === 2 && p2Index === 1)
   ) {
+    document.querySelector(".action-btn").innerHTML = "PLAY AGAIN"
+    document.querySelector(".next").classList.remove("hide")
     userScore = userScore + 1;
     us.innerHTML = userScore;
     return "YOU WIN AGAINST PC";
   } else {
+    document.querySelector(".action-btn").innerHTML = "PLAY AGAIN"
+    
     computerScore = computerScore + 1;
     cs.innerHTML = computerScore;
     return "YOU LOST AGAINST PC";
@@ -102,6 +107,8 @@ function Update(userSelect, computerSelect) {
 // play again
 
 function playAgain() {
+
+  document.querySelector(".next").classList.add("hide")
   document.querySelector(".select-container").classList.remove("hide");
   document.querySelector(".result-container").classList.add("hide");
 }
@@ -117,3 +124,29 @@ const displayRule = () => {
   document.querySelector(".close").classList.remove("hide");
   document.querySelector(".rule-container").classList.remove("hide");
 };
+
+
+// next function
+
+function displayResult(){
+  document.querySelector(".upper-container").classList.add("hide")
+  document.querySelector(".lower-container").classList.add("hide")
+  document.querySelector(".hurray-container").classList.remove("hide")
+  document.querySelector(".hurray-container").style.display = "flex"
+  document.querySelector(".next").classList.add("hide")
+}
+
+function playStart() {
+  userScore=0;
+  computerScore=0;
+  localStorage.setItem("userScore", userScore);
+  localStorage.setItem("computerScore", computerScore);
+  us.innerHTML= userScore;
+  cs.innerHTML= computerScore;
+  document.querySelector(".select-container").classList.remove("hide");
+  document.querySelector(".result-container").classList.add("hide");
+  document.querySelector(".upper-container").classList.remove("hide")
+  document.querySelector(".lower-container").classList.remove("hide")
+  document.querySelector(".hurray-container").classList.add("hide")
+  document.querySelector(".hurray-container").style.display = "none"
+}
